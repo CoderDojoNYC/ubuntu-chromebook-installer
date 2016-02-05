@@ -81,12 +81,6 @@ cd $tempbuild
 export DEBIAN_FRONTEND=noninteractive; apt-get -y -q install git
 touch "git.done"
 
-echo "Installing wallpaper"
-cd $tempbuild
-wget https://s3-us-west-1.amazonaws.com/mojombo-codestarter/codestarter-tree.jpg
-cp codestarter-tree.jpg /usr/share/backgrounds
-touch "wallpaper.done"
-
 # These dconf overrides do the following:
 # 1. Customizes the Launcher (left dock bar) to hold commonly used programs.
 # 2. Sets trackpad scrolling to "natural" (same as default on OSX).
