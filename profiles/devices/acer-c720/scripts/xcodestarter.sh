@@ -5,6 +5,12 @@
 # Create a temp directory for our work
 tempbuild=`mktemp -d`
 
+echo "Installing Arduino IDE"
+cd $tempbuild
+sudo apt-get install arduino
+sudo apt-get install openjdk-7-jre
+sudo chmod a+rw /dev/ttyACMO
+
 echo "Installing Chrome"
 cd $tempbuild
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
